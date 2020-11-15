@@ -1,5 +1,5 @@
 {
-    "name": "pbg_ntp",
+    "name": "pbg-ntp",
     "version": "0.1.1",
     "author": "John Evans",
     "summary": "Example module to manage NTP",
