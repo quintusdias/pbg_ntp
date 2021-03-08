@@ -1,14 +1,14 @@
 # Manage NTP
 class pbg_ntp {
-  ensure_packages(['ntp'])
+  ensure_packages(['chrony'])
 
-  file { '/etc/ntp.conf':
-    source => 'puppet:///modules/pbg_ntp/ntp.conf',
-    notify => Service['ntp'],
-    require => Package['ntp'],
+  file { '/etc/chrony.conf':
+    source => 'puppet:///modules/pbg_ntp/chrony.conf',
+    notify => Service['chrony'],
+    require => Package['chrony'],
   }
 
-  service { 'ntp':
+  service { 'chrony':
     ensure => running,
     enable => true,
   }
